@@ -1,0 +1,181 @@
+[gd_scene format=3 uid="uid://ck8q1br5tvi1q"]
+
+[ext_resource type="Script" uid="uid://uprhb7eot2ws" path="res://assets/scripts/settings/settings.gd" id="1_7ohy8"]
+[ext_resource type="Texture2D" uid="uid://bxnd8qmdgrat3" path="res://assets/images/GUI/QuadroNegroMenu.png" id="1_yh2mi"]
+[ext_resource type="Texture2D" uid="uid://b4xgvbhv01282" path="res://assets/images/particles/maths/a.png" id="2_cdv82"]
+[ext_resource type="Texture2D" uid="uid://cjwwu06nac6i7" path="res://assets/images/particles/maths/b.png" id="3_nrqkn"]
+[ext_resource type="Texture2D" uid="uid://bm1ud175oa6s5" path="res://assets/images/particles/maths/c.png" id="4_or756"]
+[ext_resource type="Texture2D" uid="uid://d0g8oduayb5xh" path="res://assets/images/particles/maths/i.png" id="5_xupak"]
+[ext_resource type="Texture2D" uid="uid://yonl6maqmxmb" path="res://assets/images/particles/maths/y.png" id="6_ya5aa"]
+[ext_resource type="Texture2D" uid="uid://dp2t4vioy5kqr" path="res://assets/images/particles/maths/x.png" id="7_mlw6b"]
+[ext_resource type="Texture2D" uid="uid://c0lm3drk1lu1q" path="res://assets/images/particles/maths/+.png" id="8_y3hcb"]
+[ext_resource type="Texture2D" uid="uid://bd77wa3a3vips" path="res://assets/images/particles/maths/-.png" id="9_6pyk3"]
+[ext_resource type="Texture2D" uid="uid://b4f7odqlochid" path="res://assets/images/particles/maths/dividido.png" id="10_0vjvb"]
+[ext_resource type="Texture2D" uid="uid://27ku181d1kpf" path="res://assets/images/particles/maths/1.png" id="11_mvood"]
+[ext_resource type="Texture2D" uid="uid://c25wwo41weswb" path="res://assets/images/particles/maths/2.png" id="12_tfcxh"]
+
+[sub_resource type="Gradient" id="Gradient_c7acy"]
+colors = PackedColorArray(0, 0, 0, 0, 1, 1, 1, 1)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_yf78w"]
+gradient = SubResource("Gradient_c7acy")
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_fu3xr"]
+particle_flag_disable_z = true
+emission_shape = 3
+emission_box_extents = Vector3(600, 600, 1)
+direction = Vector3(1, -0.2, 0)
+spread = 180.0
+initial_velocity_min = 10.0
+initial_velocity_max = 20.0
+gravity = Vector3(0, 0, 0)
+scale_min = 0.5
+scale_max = 1.5
+color_ramp = SubResource("GradientTexture1D_yf78w")
+
+[node name="Configs" type="Node2D" unique_id=764204766]
+
+[node name="BackGround" type="Control" parent="." unique_id=279813543]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Board" type="TextureRect" parent="BackGround" unique_id=902625529]
+layout_mode = 0
+offset_right = 887.0
+offset_bottom = 499.0
+texture = ExtResource("1_yh2mi")
+
+[node name="Particles" type="Node2D" parent="." unique_id=1616951974]
+position = Vector2(3, 0)
+
+[node name="a_particle" type="GPUParticles2D" parent="Particles" unique_id=1469935967]
+position = Vector2(459, 253)
+texture = ExtResource("2_cdv82")
+lifetime = 5.0
+preprocess = 5.0
+process_material = SubResource("ParticleProcessMaterial_fu3xr")
+
+[node name="b_particle" type="GPUParticles2D" parent="Particles" unique_id=1448649602]
+position = Vector2(459, 253)
+texture = ExtResource("3_nrqkn")
+lifetime = 5.0
+preprocess = 5.0
+process_material = SubResource("ParticleProcessMaterial_fu3xr")
+
+[node name="c_particle" type="GPUParticles2D" parent="Particles" unique_id=121986321]
+position = Vector2(459, 253)
+texture = ExtResource("4_or756")
+lifetime = 5.0
+preprocess = 5.0
+process_material = SubResource("ParticleProcessMaterial_fu3xr")
+
+[node name="i_particle" type="GPUParticles2D" parent="Particles" unique_id=617673203]
+position = Vector2(459, 253)
+texture = ExtResource("5_xupak")
+lifetime = 5.0
+preprocess = 5.0
+process_material = SubResource("ParticleProcessMaterial_fu3xr")
+
+[node name="y_particle" type="GPUParticles2D" parent="Particles" unique_id=699755913]
+position = Vector2(459, 253)
+texture = ExtResource("6_ya5aa")
+lifetime = 5.0
+preprocess = 5.0
+process_material = SubResource("ParticleProcessMaterial_fu3xr")
+
+[node name="x_particle" type="GPUParticles2D" parent="Particles" unique_id=1520861421]
+position = Vector2(459, 253)
+texture = ExtResource("7_mlw6b")
+lifetime = 5.0
+preprocess = 5.0
+process_material = SubResource("ParticleProcessMaterial_fu3xr")
+
+[node name="+_particle" type="GPUParticles2D" parent="Particles" unique_id=1725725]
+position = Vector2(459, 253)
+texture = ExtResource("8_y3hcb")
+lifetime = 5.0
+preprocess = 5.0
+process_material = SubResource("ParticleProcessMaterial_fu3xr")
+
+[node name="-_particle" type="GPUParticles2D" parent="Particles" unique_id=879338273]
+position = Vector2(459, 253)
+texture = ExtResource("9_6pyk3")
+lifetime = 5.0
+preprocess = 5.0
+process_material = SubResource("ParticleProcessMaterial_fu3xr")
+
+[node name="div_particle" type="GPUParticles2D" parent="Particles" unique_id=490291245]
+position = Vector2(459, 253)
+texture = ExtResource("10_0vjvb")
+lifetime = 5.0
+preprocess = 5.0
+process_material = SubResource("ParticleProcessMaterial_fu3xr")
+
+[node name="1_particle" type="GPUParticles2D" parent="Particles" unique_id=632717352]
+position = Vector2(459, 253)
+texture = ExtResource("11_mvood")
+lifetime = 5.0
+preprocess = 5.0
+process_material = SubResource("ParticleProcessMaterial_fu3xr")
+
+[node name="2_particle" type="GPUParticles2D" parent="Particles" unique_id=537818324]
+position = Vector2(459, 253)
+texture = ExtResource("12_tfcxh")
+lifetime = 5.0
+preprocess = 5.0
+process_material = SubResource("ParticleProcessMaterial_fu3xr")
+
+[node name="Control" type="Control" parent="." unique_id=886454851]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 888.0
+offset_bottom = 500.0
+script = ExtResource("1_7ohy8")
+
+[node name="ColorRect" type="ColorRect" parent="Control" unique_id=634635344]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -222.0
+offset_top = -220.0
+offset_right = 222.0
+offset_bottom = 220.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0.5137255)
+
+[node name="config_menu" type="VBoxContainer" parent="Control/ColorRect" unique_id=804004281]
+custom_minimum_size = Vector2(430, 0)
+custom_maximum_size = Vector2(430, 440)
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -215.0
+offset_top = 7.0
+offset_right = 215.0
+offset_bottom = 47.0
+grow_horizontal = 2
+
+[node name="Languages" type="HBoxContainer" parent="Control/ColorRect/config_menu" unique_id=1720104865]
+custom_maximum_size = Vector2(430, -1)
+layout_mode = 2
+
+[node name="Label" type="Label" parent="Control/ColorRect/config_menu/Languages" unique_id=1730840388]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "LANGUAGE_SETTING"
+
+[node name="languages_disp" type="OptionButton" parent="Control/ColorRect/config_menu/Languages" unique_id=961173086]
+layout_mode = 2
+
+[node name="BackButton" type="Button" parent="Control/ColorRect/config_menu" unique_id=1829504321]
+layout_mode = 2
+text = "BACK_MENU_BUTTON"
+
+[connection signal="pressed" from="Control/ColorRect/config_menu/BackButton" to="Control" method="_on_back_button_pressed"]

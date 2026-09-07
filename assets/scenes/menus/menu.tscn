@@ -1,0 +1,185 @@
+[gd_scene format=3 uid="uid://wi83ki3flwgn"]
+
+[ext_resource type="Texture2D" uid="uid://bxnd8qmdgrat3" path="res://assets/images/GUI/QuadroNegroMenu.png" id="1_5auq5"]
+[ext_resource type="Script" uid="uid://dm00vuexmbcg2" path="res://assets/scripts/main_menu/control.gd" id="1_dm52e"]
+[ext_resource type="Texture2D" uid="uid://oethvljwpoci" path="res://assets/images/GUI/titulo.png" id="2_dq8wk"]
+[ext_resource type="PackedScene" uid="uid://ck8q1br5tvi1q" path="res://assets/scenes/menus/configs.tscn" id="2_ju5hb"]
+[ext_resource type="Texture2D" uid="uid://b4xgvbhv01282" path="res://assets/images/particles/maths/a.png" id="3_2cixd"]
+[ext_resource type="Texture2D" uid="uid://cjwwu06nac6i7" path="res://assets/images/particles/maths/b.png" id="4_g2dwe"]
+[ext_resource type="Texture2D" uid="uid://bm1ud175oa6s5" path="res://assets/images/particles/maths/c.png" id="5_mfsk8"]
+[ext_resource type="Texture2D" uid="uid://d0g8oduayb5xh" path="res://assets/images/particles/maths/i.png" id="6_wg5t1"]
+[ext_resource type="Texture2D" uid="uid://yonl6maqmxmb" path="res://assets/images/particles/maths/y.png" id="7_f26l3"]
+[ext_resource type="Texture2D" uid="uid://dp2t4vioy5kqr" path="res://assets/images/particles/maths/x.png" id="8_bc2d7"]
+[ext_resource type="Texture2D" uid="uid://c0lm3drk1lu1q" path="res://assets/images/particles/maths/+.png" id="9_bxsi5"]
+[ext_resource type="Texture2D" uid="uid://bd77wa3a3vips" path="res://assets/images/particles/maths/-.png" id="10_wfpg1"]
+[ext_resource type="Texture2D" uid="uid://b4f7odqlochid" path="res://assets/images/particles/maths/dividido.png" id="11_8p4jg"]
+[ext_resource type="Texture2D" uid="uid://27ku181d1kpf" path="res://assets/images/particles/maths/1.png" id="12_r2hlq"]
+[ext_resource type="Texture2D" uid="uid://c25wwo41weswb" path="res://assets/images/particles/maths/2.png" id="13_47d6w"]
+[ext_resource type="PackedScene" uid="uid://b0q4jfw344xvi" path="res://assets/scenes/rooms/test_room.tscn" id="15_g2dwe"]
+
+[sub_resource type="Gradient" id="Gradient_72xh8"]
+colors = PackedColorArray(0, 0, 0, 0, 1, 1, 1, 1)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_yf78w"]
+gradient = SubResource("Gradient_72xh8")
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_r6b3v"]
+particle_flag_disable_z = true
+emission_shape = 3
+emission_box_extents = Vector3(600, 600, 1)
+direction = Vector3(1, -0.2, 0)
+spread = 180.0
+initial_velocity_min = 10.0
+initial_velocity_max = 20.0
+gravity = Vector3(0, 0, 0)
+scale_min = 0.5
+scale_max = 1.5
+color_ramp = SubResource("GradientTexture1D_yf78w")
+
+[node name="Menu" type="Node2D" unique_id=2023627230]
+
+[node name="BackGround" type="Control" parent="." unique_id=1613717252]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Board" type="TextureRect" parent="BackGround" unique_id=777932236]
+layout_mode = 0
+offset_right = 887.0
+offset_bottom = 499.0
+texture = ExtResource("1_5auq5")
+
+[node name="Title" type="TextureRect" parent="BackGround" unique_id=695953978]
+layout_mode = 0
+offset_left = 91.0
+offset_top = 64.0
+offset_right = 563.0
+offset_bottom = 256.0
+texture = ExtResource("2_dq8wk")
+stretch_mode = 4
+
+[node name="Particles" type="Node2D" parent="." unique_id=624615791]
+position = Vector2(3, 0)
+
+[node name="a_particle" type="GPUParticles2D" parent="Particles" unique_id=1841531951]
+position = Vector2(459, 253)
+texture = ExtResource("3_2cixd")
+lifetime = 5.0
+preprocess = 5.0
+process_material = SubResource("ParticleProcessMaterial_r6b3v")
+
+[node name="b_particle" type="GPUParticles2D" parent="Particles" unique_id=1964133467]
+position = Vector2(459, 253)
+texture = ExtResource("4_g2dwe")
+lifetime = 5.0
+preprocess = 5.0
+process_material = SubResource("ParticleProcessMaterial_r6b3v")
+
+[node name="c_particle" type="GPUParticles2D" parent="Particles" unique_id=1877492139]
+position = Vector2(459, 253)
+texture = ExtResource("5_mfsk8")
+lifetime = 5.0
+preprocess = 5.0
+process_material = SubResource("ParticleProcessMaterial_r6b3v")
+
+[node name="i_particle" type="GPUParticles2D" parent="Particles" unique_id=610866589]
+position = Vector2(459, 253)
+texture = ExtResource("6_wg5t1")
+lifetime = 5.0
+preprocess = 5.0
+process_material = SubResource("ParticleProcessMaterial_r6b3v")
+
+[node name="y_particle" type="GPUParticles2D" parent="Particles" unique_id=1591221534]
+position = Vector2(459, 253)
+texture = ExtResource("7_f26l3")
+lifetime = 5.0
+preprocess = 5.0
+process_material = SubResource("ParticleProcessMaterial_r6b3v")
+
+[node name="x_particle" type="GPUParticles2D" parent="Particles" unique_id=1584954519]
+position = Vector2(459, 253)
+texture = ExtResource("8_bc2d7")
+lifetime = 5.0
+preprocess = 5.0
+process_material = SubResource("ParticleProcessMaterial_r6b3v")
+
+[node name="+_particle" type="GPUParticles2D" parent="Particles" unique_id=1006916132]
+position = Vector2(459, 253)
+texture = ExtResource("9_bxsi5")
+lifetime = 5.0
+preprocess = 5.0
+process_material = SubResource("ParticleProcessMaterial_r6b3v")
+
+[node name="-_particle" type="GPUParticles2D" parent="Particles" unique_id=1340360334]
+position = Vector2(459, 253)
+texture = ExtResource("10_wfpg1")
+lifetime = 5.0
+preprocess = 5.0
+process_material = SubResource("ParticleProcessMaterial_r6b3v")
+
+[node name="div_particle" type="GPUParticles2D" parent="Particles" unique_id=101995275]
+position = Vector2(459, 253)
+texture = ExtResource("11_8p4jg")
+lifetime = 5.0
+preprocess = 5.0
+process_material = SubResource("ParticleProcessMaterial_r6b3v")
+
+[node name="1_particle" type="GPUParticles2D" parent="Particles" unique_id=2031587404]
+position = Vector2(459, 253)
+texture = ExtResource("12_r2hlq")
+lifetime = 5.0
+preprocess = 5.0
+process_material = SubResource("ParticleProcessMaterial_r6b3v")
+
+[node name="2_particle" type="GPUParticles2D" parent="Particles" unique_id=830841296]
+position = Vector2(459, 253)
+texture = ExtResource("13_47d6w")
+lifetime = 5.0
+preprocess = 5.0
+process_material = SubResource("ParticleProcessMaterial_r6b3v")
+
+[node name="Control" type="Control" parent="." unique_id=1557876320]
+custom_minimum_size = Vector2(888, 500)
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("1_dm52e")
+Start_Scene = ExtResource("15_g2dwe")
+Config_Scene = ExtResource("2_ju5hb")
+
+[node name="menu" type="VBoxContainer" parent="Control" unique_id=1891187002]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -235.0
+offset_top = -328.0
+offset_right = -35.0
+offset_bottom = -28.0
+grow_horizontal = 0
+grow_vertical = 0
+alignment = 2
+
+[node name="StartButton" type="Button" parent="Control/menu" unique_id=734499929]
+layout_mode = 2
+focus_neighbor_top = NodePath("../ExitButton")
+focus_neighbor_bottom = NodePath("../ConfigButton")
+focus_next = NodePath("../ConfigButton")
+focus_previous = NodePath("../ExitButton")
+text = "START_BUTTON"
+
+[node name="ConfigButton" type="Button" parent="Control/menu" unique_id=139820373]
+layout_mode = 2
+text = "SETTINGS_BUTTON"
+
+[node name="ExitButton" type="Button" parent="Control/menu" unique_id=130261648]
+layout_mode = 2
+text = "EXIT_BUTTON"
+
+[connection signal="pressed" from="Control/menu/StartButton" to="Control" method="_on_start_button_pressed"]
+[connection signal="pressed" from="Control/menu/ConfigButton" to="Control" method="_on_config_button_pressed"]
+[connection signal="pressed" from="Control/menu/ExitButton" to="Control" method="_on_exit_button_pressed"]

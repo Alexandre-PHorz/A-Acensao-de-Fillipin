@@ -1,0 +1,21 @@
+[gd_scene format=3 uid="uid://b1y8c3yv038xd"]
+
+[ext_resource type="Texture2D" uid="uid://c1e1q4pvvxscq" path="res://assets/images/bullets/DefaultBullet.png" id="1_e2vkt"]
+[ext_resource type="Script" uid="uid://bd2yksem0rlqs" path="res://assets/scripts/components/linear_moviment_component.gd" id="2_xiftk"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_r6b3v"]
+
+[node name="BulletDefault" type="Node2D" unique_id=1821315211]
+
+[node name="Texture" type="Sprite2D" parent="." unique_id=121344100]
+texture = ExtResource("1_e2vkt")
+
+[node name="Area" type="Area2D" parent="." unique_id=1857574445]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area" unique_id=1468839913]
+shape = SubResource("CircleShape2D_r6b3v")
+
+[node name="LinearMovimentComponent" type="Node" parent="." unique_id=197052332 node_paths=PackedStringArray("body")]
+script = ExtResource("2_xiftk")
+body = NodePath("..")
+metadata/_custom_type_script = "uid://bd2yksem0rlqs"

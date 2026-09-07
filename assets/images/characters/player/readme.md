@@ -1,0 +1,3 @@
+# Personagens
+
+Se você está aqui é por que se perguntou " Por que uma pasta apenas pro Fillipin? " ...

@@ -1,0 +1,4 @@
+[gd_resource type="InputEventAction" format=3 uid="uid://ckc21j24qya4t"]
+
+[resource]
+action = &"gm_accept"

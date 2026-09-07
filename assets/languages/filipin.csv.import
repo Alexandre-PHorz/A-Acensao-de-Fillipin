@@ -1,0 +1,19 @@
+[remap]
+
+importer="csv_translation"
+type="Translation"
+uid="uid://214f5rs4tdaf"
+
+[deps]
+
+files=["res://assets/languages/filipin.pt.translation", "res://assets/languages/filipin.en.translation", "res://assets/languages/filipin.es.translation"]
+
+source_file="res://assets/languages/filipin.csv"
+dest_files=["res://assets/languages/filipin.pt.translation", "res://assets/languages/filipin.en.translation", "res://assets/languages/filipin.es.translation"]
+
+[params]
+
+compress=1
+delimiter=0
+unescape_keys=false
+unescape_translations=true
